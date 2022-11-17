@@ -28,7 +28,7 @@ class RunningTradeViewController: UIViewController {
         tv.showsVerticalScrollIndicator = false
         tv.contentInset = UIEdgeInsets(top: 25, left: 0, bottom: 0, right: 0)
         tv.bounces = false
-        tv.backgroundColor = .rtblack
+        tv.backgroundColor = .clear
         return tv
     }()
     
@@ -36,6 +36,7 @@ class RunningTradeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNav()
         configureUI()
     }
     
@@ -44,7 +45,21 @@ class RunningTradeViewController: UIViewController {
     
     // MARK: - Helpers
     
+    func configureNav() {
+//        navigationBar.prefersLargeTitles = false
+        navigationItem.title = "RUNNING TRADE"
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.backgroundColor = .rtblue
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.titleTextAttributes = [
+            .foregroundColor: UIColor.white
+        ]
+//        UINavigationBar.standardAppearance = navBarAppearance
+    }
+    
     func configureUI() {
+        view.backgroundColor = .rtblue
         
         view.addSubview(tableview)
         tableview.snp.makeConstraints { make in

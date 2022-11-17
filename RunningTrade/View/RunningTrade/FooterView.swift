@@ -18,7 +18,7 @@ class FooterView: UITableViewHeaderFooterView {
     private lazy var filterButton: UIButton = {
         let button = UIButton()
         button.setTitle("Filter", for: .normal)
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.rtorange, for: .normal)
         button.addTarget(self, action: #selector(handleFilter), for: .touchUpInside)
         return button
     }()
@@ -32,6 +32,7 @@ class FooterView: UITableViewHeaderFooterView {
     private lazy var toggleFilter: UISwitch = {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
+        toggle.onTintColor = .rtorange
         return toggle
     }()
     
@@ -72,7 +73,8 @@ class FooterView: UITableViewHeaderFooterView {
     }
     
     private func configureUI() {
-        backgroundColor = .rtsemiblack
+        contentView.backgroundColor = .rtsemiblack
+        
         contentView.addSubview(filterButton)
         filterButton.snp.makeConstraints { make in
             make.verticalEdges.equalTo(contentView.snp.verticalEdges).inset(5)
@@ -88,7 +90,7 @@ class FooterView: UITableViewHeaderFooterView {
         
         contentView.addSubview(toggleFilter)
         toggleFilter.snp.makeConstraints { make in
-            make.verticalEdges.equalTo(contentView.snp.verticalEdges).inset(5)
+            make.centerY.equalTo(contentView.snp.centerY)
             make.right.equalToSuperview().inset(20)
         }
     }

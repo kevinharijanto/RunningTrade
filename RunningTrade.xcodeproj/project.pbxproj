@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0E038BA02924C9B400D7D7E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038B9F2924C9B400D7D7E4 /* AppDelegate.swift */; };
 		0E038BA22924C9B400D7D7E4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BA12924C9B400D7D7E4 /* SceneDelegate.swift */; };
-		0E038BA42924C9B400D7D7E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BA32924C9B400D7D7E4 /* ViewController.swift */; };
 		0E038BA92924C9B500D7D7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E038BA82924C9B500D7D7E4 /* Assets.xcassets */; };
 		0E038BAC2924C9B500D7D7E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E038BAA2924C9B500D7D7E4 /* LaunchScreen.storyboard */; };
 		0E038BB82924CD0100D7D7E4 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BB72924CD0100D7D7E4 /* Stock.swift */; };
@@ -25,13 +24,17 @@
 		0E038BD229264DC000D7D7E4 /* RunningTradeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */; };
 		0E038BD629264EAC00D7D7E4 /* StockFilterView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */; };
 		0E038BD829265D3800D7D7E4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD729265D3800D7D7E4 /* FooterView.swift */; };
+		0ED882E52926C8ED00CD105F /* TabBar1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED882E42926C8ED00CD105F /* TabBar1.swift */; };
+		0ED882E72926C91200CD105F /* TarBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED882E62926C91200CD105F /* TarBar2.swift */; };
+		0ED882E92926C93500CD105F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED882E82926C93500CD105F /* TabBar.swift */; };
+		0ED882EB2926CAC100CD105F /* TabBar3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED882EA2926CAC100CD105F /* TabBar3.swift */; };
+		0ED882ED2926CADE00CD105F /* TabBar4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED882EC2926CADE00CD105F /* TabBar4.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E038B9C2924C9B400D7D7E4 /* RunningTrade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunningTrade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E038B9F2924C9B400D7D7E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E038BA12924C9B400D7D7E4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0E038BA32924C9B400D7D7E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E038BA82924C9B500D7D7E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E038BAB2924C9B500D7D7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E038BAD2924C9B500D7D7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningTradeVC+TableView.swift"; sourceTree = "<group>"; };
 		0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockFilterView+CollectionView.swift"; sourceTree = "<group>"; };
 		0E038BD729265D3800D7D7E4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		0ED882E42926C8ED00CD105F /* TabBar1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar1.swift; sourceTree = "<group>"; };
+		0ED882E62926C91200CD105F /* TarBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarBar2.swift; sourceTree = "<group>"; };
+		0ED882E82926C93500CD105F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		0ED882EA2926CAC100CD105F /* TabBar3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar3.swift; sourceTree = "<group>"; };
+		0ED882EC2926CADE00CD105F /* TabBar4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar4.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +109,7 @@
 		0E038BB42924CAEC00D7D7E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0E038BA32924C9B400D7D7E4 /* ViewController.swift */,
+				0ED882E32926C8CF00CD105F /* TabBar */,
 				0E038BD329264DF900D7D7E4 /* RunningTrade */,
 				0E038BD429264E7500D7D7E4 /* Stock filter */,
 			);
@@ -156,6 +164,18 @@
 				0E038BCF2926257000D7D7E4 /* StockAddCell.swift */,
 			);
 			path = "Stock filter";
+			sourceTree = "<group>";
+		};
+		0ED882E32926C8CF00CD105F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				0ED882E42926C8ED00CD105F /* TabBar1.swift */,
+				0ED882E62926C91200CD105F /* TarBar2.swift */,
+				0ED882EA2926CAC100CD105F /* TabBar3.swift */,
+				0ED882EC2926CADE00CD105F /* TabBar4.swift */,
+				0ED882E82926C93500CD105F /* TabBar.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,19 +255,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E038BC729254A9800D7D7E4 /* Extension.swift in Sources */,
-				0E038BA42924C9B400D7D7E4 /* ViewController.swift in Sources */,
 				0E038BC329252FCD00D7D7E4 /* RunningTradeHeaderView.swift in Sources */,
 				0E038BCC2925EA7B00D7D7E4 /* StockFilterView.swift in Sources */,
 				0E038BD629264EAC00D7D7E4 /* StockFilterView+CollectionView.swift in Sources */,
+				0ED882E52926C8ED00CD105F /* TabBar1.swift in Sources */,
 				0E038BA02924C9B400D7D7E4 /* AppDelegate.swift in Sources */,
 				0E038BBA2924DB4600D7D7E4 /* RunningTradeVC.swift in Sources */,
 				0E038BB82924CD0100D7D7E4 /* Stock.swift in Sources */,
+				0ED882E92926C93500CD105F /* TabBar.swift in Sources */,
+				0ED882EB2926CAC100CD105F /* TabBar3.swift in Sources */,
 				0E038BD829265D3800D7D7E4 /* FooterView.swift in Sources */,
+				0ED882ED2926CADE00CD105F /* TabBar4.swift in Sources */,
 				0E038BCA29255C4C00D7D7E4 /* ReusableLabel.swift in Sources */,
 				0E038BBC2924DCE100D7D7E4 /* RunningTradeCell.swift in Sources */,
 				0E038BD229264DC000D7D7E4 /* RunningTradeVC+TableView.swift in Sources */,
 				0E038BCE29261A1900D7D7E4 /* StockFilterCell.swift in Sources */,
 				0E038BD02926257000D7D7E4 /* StockAddCell.swift in Sources */,
+				0ED882E72926C91200CD105F /* TarBar2.swift in Sources */,
 				0E038BA22924C9B400D7D7E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

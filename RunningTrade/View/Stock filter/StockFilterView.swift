@@ -113,6 +113,7 @@ class StockFilterView: UIViewController {
     
     // MARK: - Helpers
     func configureUI() {
+        view.backgroundColor = .rtsemiblack
         
         view.addSubview(background)
         background.snp.makeConstraints { make in
