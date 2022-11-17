@@ -12,7 +12,7 @@ class FooterView: UITableViewHeaderFooterView {
     static let identifier = "FooterView"
     
     var isEnabled: Bool!
-//    var filtersArray: [String]
+    var filtersArray: [String] = []
     weak var delegate: RunningTradeViewDelegate?
     
     private lazy var filterButton: UIButton = {
@@ -54,12 +54,12 @@ class FooterView: UITableViewHeaderFooterView {
     
     @objc func switchStateDidChange(_ sender:UISwitch!) {
         if (sender.isOn == true){
-            // if filters empty, alert utk isi filter
-//            if filtersArray.isEmpty {
-//                print("Ih Kosong!")
-//            } else {
+            if filtersArray.isEmpty {
+                // Show alert that user must fill filter
+                print("Filter is Nil")
+            } else {
                 delegate?.enableFilter()
-//            }
+            }
         }
         else{
             delegate?.disableFilter()
@@ -72,36 +72,25 @@ class FooterView: UITableViewHeaderFooterView {
     }
     
     private func configureUI() {
-//        backgroundColor = .rtsemiblack
+        backgroundColor = .rtsemiblack
         contentView.addSubview(filterButton)
-        filterButton.anchor(top: contentView.topAnchor,
-                            left: contentView.leftAnchor,
-                            paddingTop: 10,
-                            paddingLeft: 10)
-//        filterButton.snp.makeConstraints { make in
-//            make.verticalEdges.equalTo(contentView.snp.verticalEdges).inset(5)
-//            make.left.equalToSuperview().offset(20)
-//        }
+        filterButton.snp.makeConstraints { make in
+            make.verticalEdges.equalTo(contentView.snp.verticalEdges).inset(5)
+            make.left.equalToSuperview().offset(20)
+        }
         
         contentView.addSubview(verticalLine)
-        verticalLine.centerX(inView: contentView)
-        verticalLine.centerY(inView: contentView)
-        verticalLine.setDimensions(height: 40, width: 2)
-//        verticalLine.snp.makeConstraints { make in
-//            make.center.equalTo(contentView.snp.center)
-//            make.verticalEdges.equalTo(contentView.snp.verticalEdges).inset(10)
-//            make.width.equalTo(2)
-//        }
+        verticalLine.snp.makeConstraints { make in
+            make.center.equalTo(contentView.snp.center)
+            make.verticalEdges.equalTo(contentView.snp.verticalEdges).inset(10)
+            make.width.equalTo(2)
+        }
         
         contentView.addSubview(toggleFilter)
-        toggleFilter.anchor(top: contentView.topAnchor,
-                            right: contentView.rightAnchor,
-                            paddingTop: 10,
-                            paddingRight: 10)
-//        toggleFilter.snp.makeConstraints { make in
-//            make.verticalEdges.equalTo(contentView.snp.verticalEdges).inset(5)
-//            make.right.equalToSuperview().inset(20)
-//        }
+        toggleFilter.snp.makeConstraints { make in
+            make.verticalEdges.equalTo(contentView.snp.verticalEdges).inset(5)
+            make.right.equalToSuperview().inset(20)
+        }
     }
 }
 

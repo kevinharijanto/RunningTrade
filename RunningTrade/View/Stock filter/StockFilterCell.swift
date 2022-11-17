@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class StockFilterCell: UICollectionViewCell {
     
@@ -38,13 +39,16 @@ class StockFilterCell: UICollectionViewCell {
         layer.cornerRadius = frame.width / 4
 
         contentView.addSubview(stockLabel)
-        stockLabel.centerX(inView: contentView)
-        stockLabel.centerY(inView: contentView)
+        stockLabel.snp.makeConstraints { make in
+            make.centerX.equalTo(contentView.snp.centerX)
+            make.centerY.equalTo(contentView.snp.centerY)
+        }
         
         contentView.addSubview(deleteButton)
-        deleteButton.anchor(right: contentView.rightAnchor, paddingRight: 10)
-        deleteButton.centerY(inView: contentView)
-        
+        deleteButton.snp.makeConstraints { make in
+            make.right.equalTo(contentView.snp.right).inset(10)
+            make.centerY.equalTo(contentView.snp.centerY)
+        }
     }
     
     required init?(coder: NSCoder) {

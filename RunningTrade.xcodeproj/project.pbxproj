@@ -17,7 +17,6 @@
 		0E038BBC2924DCE100D7D7E4 /* RunningTradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BBB2924DCE100D7D7E4 /* RunningTradeCell.swift */; };
 		0E038BC129252A6400D7D7E4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E038BC029252A6400D7D7E4 /* SnapKit */; };
 		0E038BC329252FCD00D7D7E4 /* RunningTradeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BC229252FCD00D7D7E4 /* RunningTradeHeaderView.swift */; };
-		0E038BC52925357A00D7D7E4 /* RunningTradeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BC42925357A00D7D7E4 /* RunningTradeFooterView.swift */; };
 		0E038BC729254A9800D7D7E4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BC629254A9800D7D7E4 /* Extension.swift */; };
 		0E038BCA29255C4C00D7D7E4 /* ReusableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BC929255C4C00D7D7E4 /* ReusableLabel.swift */; };
 		0E038BCC2925EA7B00D7D7E4 /* StockFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BCB2925EA7B00D7D7E4 /* StockFilterView.swift */; };
@@ -26,7 +25,6 @@
 		0E038BD229264DC000D7D7E4 /* RunningTradeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */; };
 		0E038BD629264EAC00D7D7E4 /* StockFilterView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */; };
 		0E038BD829265D3800D7D7E4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD729265D3800D7D7E4 /* FooterView.swift */; };
-		0E038BDC29267D2800D7D7E4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BDB29267D2800D7D7E4 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +39,6 @@
 		0E038BB92924DB4600D7D7E4 /* RunningTradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTradeVC.swift; sourceTree = "<group>"; };
 		0E038BBB2924DCE100D7D7E4 /* RunningTradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTradeCell.swift; sourceTree = "<group>"; };
 		0E038BC229252FCD00D7D7E4 /* RunningTradeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTradeHeaderView.swift; sourceTree = "<group>"; };
-		0E038BC42925357A00D7D7E4 /* RunningTradeFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTradeFooterView.swift; sourceTree = "<group>"; };
 		0E038BC629254A9800D7D7E4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		0E038BC929255C4C00D7D7E4 /* ReusableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableLabel.swift; sourceTree = "<group>"; };
 		0E038BCB2925EA7B00D7D7E4 /* StockFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFilterView.swift; sourceTree = "<group>"; };
@@ -50,7 +47,6 @@
 		0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningTradeVC+TableView.swift"; sourceTree = "<group>"; };
 		0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockFilterView+CollectionView.swift"; sourceTree = "<group>"; };
 		0E038BD729265D3800D7D7E4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
-		0E038BDB29267D2800D7D7E4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +142,7 @@
 				0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */,
 				0E038BBB2924DCE100D7D7E4 /* RunningTradeCell.swift */,
 				0E038BC229252FCD00D7D7E4 /* RunningTradeHeaderView.swift */,
-				0E038BC42925357A00D7D7E4 /* RunningTradeFooterView.swift */,
 				0E038BD729265D3800D7D7E4 /* FooterView.swift */,
-				0E038BDB29267D2800D7D7E4 /* HeaderView.swift */,
 			);
 			path = RunningTrade;
 			sourceTree = "<group>";
@@ -243,10 +237,8 @@
 				0E038BC729254A9800D7D7E4 /* Extension.swift in Sources */,
 				0E038BA42924C9B400D7D7E4 /* ViewController.swift in Sources */,
 				0E038BC329252FCD00D7D7E4 /* RunningTradeHeaderView.swift in Sources */,
-				0E038BC52925357A00D7D7E4 /* RunningTradeFooterView.swift in Sources */,
 				0E038BCC2925EA7B00D7D7E4 /* StockFilterView.swift in Sources */,
 				0E038BD629264EAC00D7D7E4 /* StockFilterView+CollectionView.swift in Sources */,
-				0E038BDC29267D2800D7D7E4 /* HeaderView.swift in Sources */,
 				0E038BA02924C9B400D7D7E4 /* AppDelegate.swift in Sources */,
 				0E038BBA2924DB4600D7D7E4 /* RunningTradeVC.swift in Sources */,
 				0E038BB82924CD0100D7D7E4 /* Stock.swift in Sources */,

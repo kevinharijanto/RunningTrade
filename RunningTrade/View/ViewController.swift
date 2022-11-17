@@ -11,10 +11,10 @@ class ViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = .rtblue
-//        UITabBar.appearance().barTintColor = .rtgray
-//        tabBar.backgroundColor = .rtgray
-//        tabBar.tintColor = .white
+        view.backgroundColor = .rtblue
+        UITabBar.appearance().barTintColor = .rtgray
+        tabBar.backgroundColor = .rtgray
+        tabBar.tintColor = .white
         setupVCs()
     }
     
@@ -36,10 +36,6 @@ class ViewController: UITabBarController {
         navController.navigationBar.standardAppearance = navBarAppearance
         
         return navController
-    }
-    
-    @objc func handlePrint() {
-        
     }
     
     func setupVCs() {

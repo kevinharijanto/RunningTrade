@@ -22,12 +22,11 @@ class RunningTradeViewController: UIViewController {
         tv.register(RunningTradeCell.self,
                     forCellReuseIdentifier: RunningTradeCell.identifier)
         tv.register(FooterView.self, forHeaderFooterViewReuseIdentifier: FooterView.identifier)
-        tv.register(HeaderView.self, forHeaderFooterViewReuseIdentifier: HeaderView.identifier)
         tv.dataSource = self
         tv.delegate = self
         tv.separatorStyle = .singleLine
         tv.showsVerticalScrollIndicator = false
-        tv.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        tv.contentInset = UIEdgeInsets(top: 25, left: 0, bottom: 0, right: 0)
         tv.bounces = false
         tv.backgroundColor = .rtblack
         return tv
@@ -51,31 +50,14 @@ class RunningTradeViewController: UIViewController {
         tableview.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-//        tableview.anchor(top: view.safeAreaLayoutGuide.topAnchor,
-//                         leading: view.safeAreaLayoutGuide.leadingAnchor,
-//                         bottom: view.safeAreaLayoutGuide.bottomAnchor,
-//                         trailing: view.safeAreaLayoutGuide.trailingAnchor)
 
-//        let header = RunningTradeHeaderView()
-//        view.addSubview(header)
-//        header.snp.makeConstraints { make in
-//            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-//            make.height.equalTo(25)
-//            make.horizontalEdges.equalToSuperview()
-//        }
-        
-//        let footer = RunningTradeFooterView(isEnabled: false)
-//        footer.delegate = self
-//        view.addSubview(footer)
-//        footer.anchor(left: view.leftAnchor,
-//                      bottom: view.safeAreaLayoutGuide.bottomAnchor,
-//                      right: view.rightAnchor,
-//                      height: 40)
-//        footer.snp.makeConstraints { make in
-//            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
-//            make.height.equalTo(40)
-//            make.horizontalEdges.equalToSuperview()
-//        }
+        let header = RunningTradeHeaderView()
+        view.addSubview(header)
+        header.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.height.equalTo(25)
+            make.horizontalEdges.equalToSuperview()
+        }
     }
 }
 

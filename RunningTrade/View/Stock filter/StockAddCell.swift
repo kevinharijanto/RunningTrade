@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class StockAddCell: UICollectionViewCell {
     
@@ -60,8 +61,10 @@ class StockAddCell: UICollectionViewCell {
         layer.cornerRadius = frame.width / 4
 
         contentView.addSubview(addButton)
-        addButton.centerX(inView: contentView)
-        addButton.centerY(inView: contentView)
+        addButton.snp.makeConstraints { make in
+            make.centerX.equalTo(contentView.snp.centerX)
+            make.centerY.equalTo(contentView.snp.centerY)
+        }
     }
     
     required init?(coder: NSCoder) {

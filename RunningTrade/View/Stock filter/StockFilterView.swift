@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class StockFilterView: UIViewController {
     // MARK: - Properties
@@ -14,7 +15,6 @@ class StockFilterView: UIViewController {
     
     private lazy var background: UIView = {
         let rect = UIView()
-        rect.setDimensions(height: UIScreen.main.bounds.height / 2, width: UIScreen.main.bounds.width)
         rect.layer.cornerRadius = 10
         rect.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         rect.backgroundColor = .rtsemiblack
@@ -77,7 +77,6 @@ class StockFilterView: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(handleApplyFilter), for: .touchUpInside)
         button.backgroundColor = .rtorange
-        button.setDimensions(height: 36, width: UIScreen.main.bounds.width - 40)
         button.layer.cornerRadius = 8
         return button
     }()
@@ -116,34 +115,49 @@ class StockFilterView: UIViewController {
     func configureUI() {
         
         view.addSubview(background)
-        background.anchor(left: view.leftAnchor, bottom: view.bottomAnchor)
+        background.snp.makeConstraints { make in
+            make.leading.bottom.trailing.equalToSuperview()
+            make.height.equalTo(UIScreen.main.bounds.height / 2)
+        }
         
         view.addSubview(modalTitle)
-        modalTitle.anchor(top: background.topAnchor, paddingTop: 20)
-        modalTitle.centerX(inView: view)
+        modalTitle.snp.makeConstraints { make in
+            make.top.equalTo(background.snp.top).offset(20)
+            make.centerX.equalToSuperview()
+        }
         
         view.addSubview(closeButton)
-        closeButton.anchor(top: background.topAnchor, right: view.rightAnchor, paddingTop: 20, paddingRight: 20)
+        closeButton.snp.makeConstraints { make in
+            make.top.equalTo(background.snp.top).offset(20)
+            make.right.equalTo(background.snp.right).inset(20)
+        }
         
         view.addSubview(clearFilterButton)
-        clearFilterButton.anchor(top: modalTitle.bottomAnchor, left: view.leftAnchor,paddingTop: 50, paddingLeft: 20)
+        clearFilterButton.snp.makeConstraints { make in
+            make.top.equalTo(modalTitle.snp.bottom).offset(50)
+            make.left.equalTo(background.snp.left).offset(20)
+        }
         
         view.addSubview(textLabel)
-        textLabel.anchor(top: clearFilterButton.bottomAnchor, left: view.leftAnchor,paddingTop: 10, paddingLeft: 20)
+        textLabel.snp.makeConstraints { make in
+            make.top.equalTo(clearFilterButton.snp.bottom).offset(10)
+            make.left.equalTo(background.snp.left).offset(20)
+        }
         
         configureCollectionView()
         view.addSubview(collectionView)
-        collectionView.anchor(top: textLabel.bottomAnchor,
-                              left: background.leftAnchor,
-                              bottom: background.bottomAnchor,
-                              paddingTop: 10,
-                              paddingLeft: 20,
-                              paddingBottom: 80,
-                              width: view.frame.width - 20)
+        collectionView.snp.makeConstraints { make in
+            make.top.equalTo(textLabel.snp.bottom).offset(10)
+            make.horizontalEdges.equalTo(view.frame.width).inset(20)
+            make.bottom.equalTo(background.snp.bottom).inset(80)
+        }
         
         view.addSubview(applyFilterButton)
-        applyFilterButton.anchor(top: collectionView.bottomAnchor)
-        applyFilterButton.centerX(inView: background)
+        applyFilterButton.snp.makeConstraints { make in
+            make.top.equalTo(collectionView.snp.bottom)
+            make.centerX.equalTo(background.snp.centerX)
+            make.width.equalTo(UIScreen.main.bounds.width - 40)
+        }
     }
     
     func configureCollectionView() {

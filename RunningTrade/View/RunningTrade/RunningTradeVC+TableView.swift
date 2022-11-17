@@ -38,7 +38,7 @@ extension RunningTradeViewController: UITableViewDelegate, UITableViewDataSource
         let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: FooterView.identifier) as! FooterView
         footer.delegate = self
         footer.isEnabled = isFilterEnabled
-//        footer.filtersArray = filters
+        footer.filtersArray = filters
         footer.configure()
         return footer
     }
@@ -46,14 +46,4 @@ extension RunningTradeViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50
     }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderView.identifier) as! HeaderView
-        header.backgroundColor = .rtblue
-        return header
-    }
-    
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 25
-//    }
 }
