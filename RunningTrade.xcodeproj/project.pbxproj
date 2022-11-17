@@ -12,6 +12,21 @@
 		0E038BA42924C9B400D7D7E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BA32924C9B400D7D7E4 /* ViewController.swift */; };
 		0E038BA92924C9B500D7D7E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E038BA82924C9B500D7D7E4 /* Assets.xcassets */; };
 		0E038BAC2924C9B500D7D7E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E038BAA2924C9B500D7D7E4 /* LaunchScreen.storyboard */; };
+		0E038BB82924CD0100D7D7E4 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BB72924CD0100D7D7E4 /* Stock.swift */; };
+		0E038BBA2924DB4600D7D7E4 /* RunningTradeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BB92924DB4600D7D7E4 /* RunningTradeVC.swift */; };
+		0E038BBC2924DCE100D7D7E4 /* RunningTradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BBB2924DCE100D7D7E4 /* RunningTradeCell.swift */; };
+		0E038BC129252A6400D7D7E4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0E038BC029252A6400D7D7E4 /* SnapKit */; };
+		0E038BC329252FCD00D7D7E4 /* RunningTradeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BC229252FCD00D7D7E4 /* RunningTradeHeaderView.swift */; };
+		0E038BC52925357A00D7D7E4 /* RunningTradeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BC42925357A00D7D7E4 /* RunningTradeFooterView.swift */; };
+		0E038BC729254A9800D7D7E4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BC629254A9800D7D7E4 /* Extension.swift */; };
+		0E038BCA29255C4C00D7D7E4 /* ReusableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BC929255C4C00D7D7E4 /* ReusableLabel.swift */; };
+		0E038BCC2925EA7B00D7D7E4 /* StockFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BCB2925EA7B00D7D7E4 /* StockFilterView.swift */; };
+		0E038BCE29261A1900D7D7E4 /* StockFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BCD29261A1900D7D7E4 /* StockFilterCell.swift */; };
+		0E038BD02926257000D7D7E4 /* StockAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BCF2926257000D7D7E4 /* StockAddCell.swift */; };
+		0E038BD229264DC000D7D7E4 /* RunningTradeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */; };
+		0E038BD629264EAC00D7D7E4 /* StockFilterView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */; };
+		0E038BD829265D3800D7D7E4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD729265D3800D7D7E4 /* FooterView.swift */; };
+		0E038BDC29267D2800D7D7E4 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BDB29267D2800D7D7E4 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +37,20 @@
 		0E038BA82924C9B500D7D7E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E038BAB2924C9B500D7D7E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E038BAD2924C9B500D7D7E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E038BB72924CD0100D7D7E4 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		0E038BB92924DB4600D7D7E4 /* RunningTradeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTradeVC.swift; sourceTree = "<group>"; };
+		0E038BBB2924DCE100D7D7E4 /* RunningTradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTradeCell.swift; sourceTree = "<group>"; };
+		0E038BC229252FCD00D7D7E4 /* RunningTradeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTradeHeaderView.swift; sourceTree = "<group>"; };
+		0E038BC42925357A00D7D7E4 /* RunningTradeFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTradeFooterView.swift; sourceTree = "<group>"; };
+		0E038BC629254A9800D7D7E4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		0E038BC929255C4C00D7D7E4 /* ReusableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableLabel.swift; sourceTree = "<group>"; };
+		0E038BCB2925EA7B00D7D7E4 /* StockFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFilterView.swift; sourceTree = "<group>"; };
+		0E038BCD29261A1900D7D7E4 /* StockFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFilterCell.swift; sourceTree = "<group>"; };
+		0E038BCF2926257000D7D7E4 /* StockAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAddCell.swift; sourceTree = "<group>"; };
+		0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningTradeVC+TableView.swift"; sourceTree = "<group>"; };
+		0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockFilterView+CollectionView.swift"; sourceTree = "<group>"; };
+		0E038BD729265D3800D7D7E4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		0E038BDB29267D2800D7D7E4 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E038BC129252A6400D7D7E4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,11 +84,12 @@
 		0E038B9E2924C9B400D7D7E4 /* RunningTrade */ = {
 			isa = PBXGroup;
 			children = (
+				0E038BAD2924C9B500D7D7E4 /* Info.plist */,
 				0E038BB62924CAFD00D7D7E4 /* Misc */,
 				0E038BB32924CAE600D7D7E4 /* Model */,
 				0E038BB52924CAF100D7D7E4 /* ViewModel */,
 				0E038BB42924CAEC00D7D7E4 /* View */,
-				0E038BA32924C9B400D7D7E4 /* ViewController.swift */,
+				0E038BC829255C3B00D7D7E4 /* Utilities */,
 			);
 			path = RunningTrade;
 			sourceTree = "<group>";
@@ -66,6 +97,7 @@
 		0E038BB32924CAE600D7D7E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E038BB72924CD0100D7D7E4 /* Stock.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -73,6 +105,9 @@
 		0E038BB42924CAEC00D7D7E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E038BA32924C9B400D7D7E4 /* ViewController.swift */,
+				0E038BD329264DF900D7D7E4 /* RunningTrade */,
+				0E038BD429264E7500D7D7E4 /* Stock filter */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,9 +126,42 @@
 				0E038BA12924C9B400D7D7E4 /* SceneDelegate.swift */,
 				0E038BA82924C9B500D7D7E4 /* Assets.xcassets */,
 				0E038BAA2924C9B500D7D7E4 /* LaunchScreen.storyboard */,
-				0E038BAD2924C9B500D7D7E4 /* Info.plist */,
 			);
 			path = Misc;
+			sourceTree = "<group>";
+		};
+		0E038BC829255C3B00D7D7E4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0E038BC629254A9800D7D7E4 /* Extension.swift */,
+				0E038BC929255C4C00D7D7E4 /* ReusableLabel.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0E038BD329264DF900D7D7E4 /* RunningTrade */ = {
+			isa = PBXGroup;
+			children = (
+				0E038BB92924DB4600D7D7E4 /* RunningTradeVC.swift */,
+				0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */,
+				0E038BBB2924DCE100D7D7E4 /* RunningTradeCell.swift */,
+				0E038BC229252FCD00D7D7E4 /* RunningTradeHeaderView.swift */,
+				0E038BC42925357A00D7D7E4 /* RunningTradeFooterView.swift */,
+				0E038BD729265D3800D7D7E4 /* FooterView.swift */,
+				0E038BDB29267D2800D7D7E4 /* HeaderView.swift */,
+			);
+			path = RunningTrade;
+			sourceTree = "<group>";
+		};
+		0E038BD429264E7500D7D7E4 /* Stock filter */ = {
+			isa = PBXGroup;
+			children = (
+				0E038BCB2925EA7B00D7D7E4 /* StockFilterView.swift */,
+				0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */,
+				0E038BCD29261A1900D7D7E4 /* StockFilterCell.swift */,
+				0E038BCF2926257000D7D7E4 /* StockAddCell.swift */,
+			);
+			path = "Stock filter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +180,9 @@
 			dependencies = (
 			);
 			name = RunningTrade;
+			packageProductDependencies = (
+				0E038BC029252A6400D7D7E4 /* SnapKit */,
+			);
 			productName = RunningTrade;
 			productReference = 0E038B9C2924C9B400D7D7E4 /* RunningTrade.app */;
 			productType = "com.apple.product-type.application";
@@ -140,6 +211,9 @@
 				Base,
 			);
 			mainGroup = 0E038B932924C9B400D7D7E4;
+			packageReferences = (
+				0E038BBF29252A6400D7D7E4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 0E038B9D2924C9B400D7D7E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -166,8 +240,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E038BC729254A9800D7D7E4 /* Extension.swift in Sources */,
 				0E038BA42924C9B400D7D7E4 /* ViewController.swift in Sources */,
+				0E038BC329252FCD00D7D7E4 /* RunningTradeHeaderView.swift in Sources */,
+				0E038BC52925357A00D7D7E4 /* RunningTradeFooterView.swift in Sources */,
+				0E038BCC2925EA7B00D7D7E4 /* StockFilterView.swift in Sources */,
+				0E038BD629264EAC00D7D7E4 /* StockFilterView+CollectionView.swift in Sources */,
+				0E038BDC29267D2800D7D7E4 /* HeaderView.swift in Sources */,
 				0E038BA02924C9B400D7D7E4 /* AppDelegate.swift in Sources */,
+				0E038BBA2924DB4600D7D7E4 /* RunningTradeVC.swift in Sources */,
+				0E038BB82924CD0100D7D7E4 /* Stock.swift in Sources */,
+				0E038BD829265D3800D7D7E4 /* FooterView.swift in Sources */,
+				0E038BCA29255C4C00D7D7E4 /* ReusableLabel.swift in Sources */,
+				0E038BBC2924DCE100D7D7E4 /* RunningTradeCell.swift in Sources */,
+				0E038BD229264DC000D7D7E4 /* RunningTradeVC+TableView.swift in Sources */,
+				0E038BCE29261A1900D7D7E4 /* StockFilterCell.swift in Sources */,
+				0E038BD02926257000D7D7E4 /* StockAddCell.swift in Sources */,
 				0E038BA22924C9B400D7D7E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +466,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0E038BBF29252A6400D7D7E4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0E038BC029252A6400D7D7E4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0E038BBF29252A6400D7D7E4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0E038B942924C9B400D7D7E4 /* Project object */;
 }

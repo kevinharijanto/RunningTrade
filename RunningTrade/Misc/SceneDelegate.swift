@@ -16,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = ViewController()
+        let home = ViewController()
+        window.rootViewController = home
+        home.selectedIndex = 2
         self.window = window
         window.makeKeyAndVisible()
     }
