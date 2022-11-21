@@ -55,13 +55,22 @@ class StockFilterView: UIViewController {
     
     internal lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 100, height: 40)
+//        layout.itemSize = CGSize(width:100, height: 40)
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//        layout.minimumInteritemSpacing = 10
+//        layout.minimumLineSpacing = 10
+
         return layout
     }()
     
     internal lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        
         collectionView.backgroundColor = .clear
+        collectionView.contentInsetAdjustmentBehavior = .always
+        
+        collectionView.register(StockFilterCell.self, forCellWithReuseIdentifier: StockFilterCell.identifier)
+        collectionView.register(StockAddCell.self, forCellWithReuseIdentifier: StockAddCell.identifier)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -145,7 +154,6 @@ class StockFilterView: UIViewController {
             make.left.equalTo(background.snp.left).offset(20)
         }
         
-        configureCollectionView()
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.top.equalTo(textLabel.snp.bottom).offset(10)
@@ -159,21 +167,6 @@ class StockFilterView: UIViewController {
             make.centerX.equalTo(background.snp.centerX)
             make.width.equalTo(UIScreen.main.bounds.width - 40)
         }
-    }
-    
-    func configureCollectionView() {
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        // collection item size
-        layout.itemSize = CGSize(width: 100, height: 40)
-        // set the frame and layout
-        collectionView = UICollectionView(frame: view.frame, collectionViewLayout: layout)
-        collectionView.backgroundColor = .clear
-        
-        collectionView.register(StockFilterCell.self, forCellWithReuseIdentifier: StockFilterCell.identifier)
-        collectionView.register(StockAddCell.self, forCellWithReuseIdentifier: StockAddCell.identifier)
-        
-        collectionView.dataSource = self
-        collectionView.delegate = self
     }
 }
 

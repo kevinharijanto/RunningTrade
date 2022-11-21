@@ -19,9 +19,6 @@ class StockAddCell: UICollectionViewCell {
         button.setTitle("Add Stock", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14)
         button.setTitleColor(.rtorange, for: .normal)
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.rtorange.cgColor
-        button.layer.cornerRadius = 10
         
         button.menu = menu
         button.showsMenuAsPrimaryAction = true
@@ -58,12 +55,16 @@ class StockAddCell: UICollectionViewCell {
         super.init(frame: frame)
         
         layer.backgroundColor = UIColor.rtsemiblack.cgColor
-        layer.cornerRadius = frame.width / 4
+        layer.cornerRadius = frame.height / 4
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.rtorange.cgColor
 
         contentView.addSubview(addButton)
         addButton.snp.makeConstraints { make in
-            make.centerX.equalTo(contentView.snp.centerX)
-            make.centerY.equalTo(contentView.snp.centerY)
+            make.top.equalTo(contentView.snp.top).offset(10)
+            make.bottom.equalTo(contentView.snp.bottom).inset(10)
+            make.leading.equalTo(contentView.snp.leading).offset(10)
+            make.trailing.equalTo(contentView.snp.trailing).inset(10)
         }
     }
     

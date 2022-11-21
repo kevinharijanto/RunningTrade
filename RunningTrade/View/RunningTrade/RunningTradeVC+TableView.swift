@@ -33,17 +33,4 @@ extension RunningTradeViewController: UITableViewDelegate, UITableViewDataSource
         cell.configure()
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: FooterView.identifier) as! FooterView
-        footer.delegate = self
-        footer.isEnabled = isFilterEnabled
-        footer.filtersArray = filters
-        footer.configure()
-        return footer
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 50
-    }
 }

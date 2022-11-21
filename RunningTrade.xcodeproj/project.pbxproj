@@ -23,7 +23,8 @@
 		0E038BD02926257000D7D7E4 /* StockAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BCF2926257000D7D7E4 /* StockAddCell.swift */; };
 		0E038BD229264DC000D7D7E4 /* RunningTradeVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */; };
 		0E038BD629264EAC00D7D7E4 /* StockFilterView+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */; };
-		0E038BD829265D3800D7D7E4 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E038BD729265D3800D7D7E4 /* FooterView.swift */; };
+		0E7100CB292936E700D1DCF4 /* RunningTradeVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7100CA292936E700D1DCF4 /* RunningTradeVC+Delegate.swift */; };
+		0E7100CD292A75D100D1DCF4 /* IHSGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7100CC292A75D100D1DCF4 /* IHSGView.swift */; };
 		0ED882E52926C8ED00CD105F /* TabBar1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED882E42926C8ED00CD105F /* TabBar1.swift */; };
 		0ED882E72926C91200CD105F /* TarBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED882E62926C91200CD105F /* TarBar2.swift */; };
 		0ED882E92926C93500CD105F /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED882E82926C93500CD105F /* TabBar.swift */; };
@@ -49,7 +50,8 @@
 		0E038BCF2926257000D7D7E4 /* StockAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAddCell.swift; sourceTree = "<group>"; };
 		0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningTradeVC+TableView.swift"; sourceTree = "<group>"; };
 		0E038BD529264EAC00D7D7E4 /* StockFilterView+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockFilterView+CollectionView.swift"; sourceTree = "<group>"; };
-		0E038BD729265D3800D7D7E4 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		0E7100CA292936E700D1DCF4 /* RunningTradeVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningTradeVC+Delegate.swift"; sourceTree = "<group>"; };
+		0E7100CC292A75D100D1DCF4 /* IHSGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSGView.swift; sourceTree = "<group>"; };
 		0ED882E42926C8ED00CD105F /* TabBar1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar1.swift; sourceTree = "<group>"; };
 		0ED882E62926C91200CD105F /* TarBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarBar2.swift; sourceTree = "<group>"; };
 		0ED882E82926C93500CD105F /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
@@ -147,10 +149,11 @@
 			isa = PBXGroup;
 			children = (
 				0E038BB92924DB4600D7D7E4 /* RunningTradeVC.swift */,
+				0E7100CA292936E700D1DCF4 /* RunningTradeVC+Delegate.swift */,
 				0E038BD129264DC000D7D7E4 /* RunningTradeVC+TableView.swift */,
 				0E038BBB2924DCE100D7D7E4 /* RunningTradeCell.swift */,
 				0E038BC229252FCD00D7D7E4 /* RunningTradeHeaderView.swift */,
-				0E038BD729265D3800D7D7E4 /* FooterView.swift */,
+				0E7100CC292A75D100D1DCF4 /* IHSGView.swift */,
 			);
 			path = RunningTrade;
 			sourceTree = "<group>";
@@ -264,15 +267,16 @@
 				0E038BB82924CD0100D7D7E4 /* Stock.swift in Sources */,
 				0ED882E92926C93500CD105F /* TabBar.swift in Sources */,
 				0ED882EB2926CAC100CD105F /* TabBar3.swift in Sources */,
-				0E038BD829265D3800D7D7E4 /* FooterView.swift in Sources */,
 				0ED882ED2926CADE00CD105F /* TabBar4.swift in Sources */,
 				0E038BCA29255C4C00D7D7E4 /* ReusableLabel.swift in Sources */,
+				0E7100CB292936E700D1DCF4 /* RunningTradeVC+Delegate.swift in Sources */,
 				0E038BBC2924DCE100D7D7E4 /* RunningTradeCell.swift in Sources */,
 				0E038BD229264DC000D7D7E4 /* RunningTradeVC+TableView.swift in Sources */,
 				0E038BCE29261A1900D7D7E4 /* StockFilterCell.swift in Sources */,
 				0E038BD02926257000D7D7E4 /* StockAddCell.swift in Sources */,
 				0ED882E72926C91200CD105F /* TarBar2.swift in Sources */,
 				0E038BA22924C9B400D7D7E4 /* SceneDelegate.swift in Sources */,
+				0E7100CD292A75D100D1DCF4 /* IHSGView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

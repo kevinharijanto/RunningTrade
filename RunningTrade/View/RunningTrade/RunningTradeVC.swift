@@ -17,11 +17,16 @@ class RunningTradeViewController: UIViewController {
     internal var filters = [String]()
     internal var isFilterEnabled = false
     
+    private lazy var tvBG: UIView = {
+        let rect = UIView()
+        rect.backgroundColor = .rtblack
+        return rect
+    }()
+    
     internal lazy var tableview: UITableView = {
         let tv = UITableView()
         tv.register(RunningTradeCell.self,
                     forCellReuseIdentifier: RunningTradeCell.identifier)
-        tv.register(FooterView.self, forHeaderFooterViewReuseIdentifier: FooterView.identifier)
         tv.dataSource = self
         tv.delegate = self
         tv.separatorStyle = .singleLine
@@ -32,52 +37,45 @@ class RunningTradeViewController: UIViewController {
         return tv
     }()
     
+    private lazy var footerBG: UIView = {
+        let rect = UIView()
+        rect.backgroundColor = .rtsemiblack
+        return rect
+    }()
+    
+    private lazy var filterButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Stock Filter", for: .normal)
+        button.setTitleColor(.rtorange, for: .normal)
+        button.addTarget(self, action: #selector(handleFilter), for: .touchUpInside)
+        return button
+    }()
+    
+    private lazy var verticalLine: UIView = {
+        let line = UIView()
+        line.backgroundColor = .rtgray
+        return line
+    }()
+    
+    internal lazy var toggleFilter: UISwitch = {
+        let toggle = UISwitch()
+        toggle.addTarget(self, action: #selector(self.switchStateDidChange(_:)), for: .valueChanged)
+        toggle.onTintColor = .rtorange
+        return toggle
+    }()
+    
+    
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNav()
         configureUI()
+        configureFooter()
     }
     
     // MARK: - Selectors
-    
-    
-    // MARK: - Helpers
-    
-    func configureNav() {
-//        navigationBar.prefersLargeTitles = false
-        navigationItem.title = "RUNNING TRADE"
-        
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.backgroundColor = .rtblue
-        navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.titleTextAttributes = [
-            .foregroundColor: UIColor.white
-        ]
-//        UINavigationBar.standardAppearance = navBarAppearance
-    }
-    
-    func configureUI() {
-        view.backgroundColor = .rtblue
-        
-        view.addSubview(tableview)
-        tableview.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-        }
-
-        let header = RunningTradeHeaderView()
-        view.addSubview(header)
-        header.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            make.height.equalTo(25)
-            make.horizontalEdges.equalToSuperview()
-        }
-    }
-}
-
-extension RunningTradeViewController: RunningTradeViewDelegate {
-    func showModal() {
+    @objc func handleFilter() {
+        // show modal
         let vc = StockFilterView(filters: filters)
         vc.filters = filters
         vc.delegate = self
@@ -89,32 +87,78 @@ extension RunningTradeViewController: RunningTradeViewDelegate {
         }
         present(navVC, animated: true, completion: nil)
     }
-     
-    func addFilter(filters: [String]) {
-        self.filters = filters
-        self.filteredData = data.filter {
-            filters.contains($0.stockName)
+    
+    @objc func switchStateDidChange(_ sender:UISwitch!) {
+        if filters.isEmpty {
+            // show alert
+            toggleFilter.setOn(false, animated: true)
         }
-        if !filters.isEmpty {
+        
+        if (sender.isOn == true){
             isFilterEnabled = true
+            toggleFilter.setOn(true, animated: true)
+            tableview.reloadData()
         }
-        tableview.reloadData()
+        else{
+            isFilterEnabled = false
+            toggleFilter.setOn(false, animated: true)
+            tableview.reloadData()
+        }
     }
     
-    func enableFilter() {
-        isFilterEnabled = true
-        tableview.reloadData()
+    // MARK: - Helpers
+    
+    func configureUI() {
+        navigationItem.title = "RUNNING TRADE"
+        view.backgroundColor = .rtblue
+        
+        let ihsgView = UIBarButtonItem(customView: IHSGView())
+        navigationItem.rightBarButtonItem = ihsgView
+        
+        view.addSubview(tvBG)
+        tvBG.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        view.addSubview(tableview)
+        tableview.snp.makeConstraints { make in
+            make.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+
+        let header = RunningTradeHeaderView()
+        view.addSubview(header)
+        header.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.height.equalTo(25)
+            make.horizontalEdges.equalToSuperview()
+        }
     }
     
-    func disableFilter() {
-        isFilterEnabled = false
-        tableview.reloadData()
+    func configureFooter() {
+        view.addSubview(footerBG)
+        footerBG.snp.makeConstraints { make in
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            make.height.equalTo(60)
+            make.horizontalEdges.equalToSuperview()
+        }
+        
+        view.addSubview(filterButton)
+        filterButton.snp.makeConstraints { make in
+            make.verticalEdges.equalTo(footerBG.snp.verticalEdges).inset(5)
+            make.left.equalToSuperview().offset(20)
+        }
+
+        view.addSubview(verticalLine)
+        verticalLine.snp.makeConstraints { make in
+            make.center.equalTo(footerBG.snp.center)
+            make.width.equalTo(2)
+        }
+
+        view.addSubview(toggleFilter)
+        toggleFilter.snp.makeConstraints { make in
+            make.centerY.equalTo(footerBG.snp.centerY)
+            make.right.equalToSuperview().inset(20)
+        }
     }
 }
 
-protocol RunningTradeViewDelegate: AnyObject {
-    func showModal()
-    func addFilter(filters: [String])
-    func enableFilter()
-    func disableFilter()
-}
